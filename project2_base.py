@@ -24,6 +24,41 @@ def get_ground_truth_data():
              'qantas747', 'turkish_flag', 'airbus_tree', 'easter_rabbit', 'belevingsvlucht', 'anzac_day', 'thankyou',
              'vasaloppet']
 
+    # flights = {}
+    # projection_for_flight = {}  
+    # i = 0  # This counter ensures unique IDs for flights with non-unique callsigns
+
+    # for x in names:
+    #     flight = samples.__getattr__(x)
+    #     if not flight:
+    #         print("name %s does not work" % x)
+    #         continue  # Skip this iteration if the flight data is not available
+
+    #     # Ensure unique flight IDs even if callsigns are duplicated
+    #     unique_flight_id = f"{flight.callsign}_{i:03}"
+    #     while unique_flight_id in flights:
+    #         i += 1  # Increment until a unique ID is found
+    #         unique_flight_id = f"{flight.callsign}_{i:03}"
+
+    #     print("reading data of flight: %s" % unique_flight_id)
+
+    #     # Assign the unique ID to the flight
+    #     flight = flight.assign(flight_id=unique_flight_id)
+
+    #     # Set projection; this part seems unrelated to flight ID uniqueness but is preserved from your code
+    #     projection = pyproj.Proj(proj="lcc", ellps="WGS84",
+    #                              lat_1=flight.data.latitude.min(), lat_2=flight.data.latitude.max(),
+    #                              lon_1=flight.data.longitude.min(), lon_2=flight.data.longitude.max(),
+    #                              lat_0=flight.data.latitude.mean(), lon_0=flight.data.longitude.mean())
+
+    #     # Store flight and projection using the unique flight ID
+    #     flights[unique_flight_id] = flight
+    #     projection_for_flight[unique_flight_id] = projection
+
+    #     # Increment counter for the next flight
+    #     i += 1
+
+    # return flights
     flights = {}
     i = 0
     for x in names:
